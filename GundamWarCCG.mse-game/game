@@ -1,0 +1,337 @@
+﻿mse version: 2.0.0
+short name: GW
+full name: GundamWarCCG
+installer group: GCG/game files
+icon: card-back.png
+position hint: 01
+
+version: 2023-12-04
+
+
+####################### Card Function Definitions
+
+init script:
+	defaultcolor :=	{ case card.corps of
+			"Earth Federation": "Blue"
+			"A.E.U.G.": "Blue"
+			"Principality of Zeon": "Green"
+			"Titans": "Black"
+			"Zanscale Empire": "Black"
+			"Neo Zeon": "Red"
+			"Crossbone Vanguard": "Red"
+			"Turn A": "Brown"
+			"Gundam X": "Brown"
+			"Wing Gundam": "White"
+			"Gundam Seed": "White"
+			else: "Purple"
+	}
+	faction_code :=	{ case card.corps of
+			"Earth Federation": "E"
+			"A.E.U.G.": "E" ##???
+			"Principality of Zeon": "Z"
+			"Titans": "T"
+			"Zanscale Empire": "ZA" 
+			"Neo Zeon": "N"
+			"Crossbone Vanguard":"C"
+			"Turn A": "A"
+			"Gundam X": "X"
+			"Wing Gundam": "W"
+			"Gundam Seed": "S"
+			else: "P"
+	}
+	type_code := { case card.type of
+			"Unit": "U-",
+			"Character": "CH-",
+			"Command": "C-",
+			"Operation": "O-",
+			"Generation": "G-",
+			else: "X-"
+	}
+	color_code := { case card.color of 
+			"Blue": "A",
+			"Green": "B",
+			"Black": "C",
+			"Red": "D",
+			"Brown": "E",
+			"White": "F",
+			"Purple": "G",
+			else: "X"
+	}
+	is_special	:= { contains(card.rarity, match: "Special") }
+	cardtyper	:= { if is_special() then "SP-" else type_code() + faction_code() }
+
+####################### Set Field Definitions
+
+set field:
+	type: text
+	name: Set_Name
+	identifying: true
+
+set field:
+	type: text
+	name: Set_Code
+	identifying: true
+
+
+####################### Card Field Definitions
+
+card field:
+	type:			text
+	name:			type_code
+	script:			cardtyper()
+	description:		Card type
+	card list visible:	false
+	editable:		false
+	save value:		false
+
+card field:
+	type:			text
+	name:			list_number
+	description:		Card Number
+	card list visible:	false
+
+card field:
+	type:			text
+	name:			sort_number
+	script:			card.type_code + card.list_number
+	save value:		false
+	identifying:		true
+	card list visible:	true
+	card list column:	1
+
+
+####################### Name line
+
+card field:
+	type:				text
+	name:				full_name
+	identifying:			false
+	card list visible:		true
+	card list column:		2
+	description:			The name of the card
+
+card field:
+	type:				text
+	name:				play_cost
+	card list visible:		false
+	multi line:			false
+	card list column:		500
+	description:			The casting cost of the card
+
+card field:
+	type:				text
+	name:				corps_power
+	card list visible:		false
+	multi line:			false
+	card list column:		501
+	description:			The required corps generator power
+
+card field:
+	type:				text
+	name:				generator_power
+	card list visible:		false
+	multi line:			false
+	card list column:		502
+	description:			The total required generator power
+
+####################### Image
+
+card field:
+	type:				image
+	name:				image
+	show statistics:		false
+	description:			The image of the card
+
+card field:
+	type:				choice
+	name:				textbox
+	show statistics:		false
+	editable:			false
+	choice: true
+
+####################### Card type
+
+card field:
+	type:				choice
+	name:				corps
+	card list visible:		true
+	card list column:		3
+	description:			Corps of the card
+	choice:		
+	choice:		Earth Federation
+	choice:		A.E.U.G.
+	choice:		Principality of Zeon
+	choice:		Titans
+	choice:		Zanscale Empire
+	choice:		Neo Zeon
+	choice:		Turn A
+	choice:		Gundam X
+	choice:		Wing Gundam
+	choice:		Gundam Seed
+
+card field:
+	type:			choice
+	name:			faction_color
+	editable:		false
+	card list visible:	true
+	card list column:	4
+	choice:		Blue
+	choice:		Green
+	choice:		Black
+	choice:		Red
+	choice:		Brown
+	choice:		White
+	choice:		Purple
+	script:		defaultcolor(card.corps)
+	description:	The color of the card.
+
+card field:
+	type:			choice
+	name:			type
+	description:		The type and layout of the card.
+	card list visible:	true
+	card list column:	4
+	script: 	if card.faction_color == "Purple" then "Generation" else value
+	choice:	
+		name:	Generation
+		enabled: true
+	choice:			
+		name:	Unit
+		enabled: {card.faction_color != "Purple"}
+	choice:	
+		name:	Character
+		enabled: {card.faction_color != "Purple"}
+	choice:	
+		name:	Command
+		enabled: {card.faction_color != "Purple"}
+	choice:	
+		name:	Operation
+		enabled: {card.faction_color != "Purple"}
+
+card field:
+	type:		choice
+	name:		set_on
+	choice:
+	choice:		(UNIT)
+
+card field:
+	type:		choice
+	name:		rarity
+	choice:		Common
+	choice:		Uncommon
+	choice:		Rare
+	choice:		Special
+	description:	The rarity of the card.
+
+####################### Text box
+
+card field:
+	type:				text
+	name:				effect
+	show statistics:		false
+	multi line:			true
+	description:			The rules text for the card.
+
+card field:
+	type:				text
+	name:				flavor_text
+	show statistics:		false
+	multi line:			true
+	description:			The flavor text for the card.
+
+####################### LeftPowers
+
+card field:
+	type:				text
+	name:				strike
+	show statistics:		false
+	description:			The strike power of a Unit
+
+card field:
+	type:				text
+	name:				shooting
+	show statistics:		false
+	description:			The shooting power of a Unit
+
+card field:
+	type:				text
+	name:				defense
+	show statistics:		false
+	description:			The defense power of a Unit
+
+card field:
+	type:				text
+	name:				SSD
+	save value:			false
+	script: 
+		combined_editor(
+			field1: card.strike,
+			separator1: " ",
+			field2: card.shooting,
+			separator2: " ",
+			field3: card.defense,
+			soft_before_empty: true,
+			hide_when_empty:   true
+		)
+	card list visible:		true
+	card list column:		5
+	card list width:		50
+	card list name:			S/S/D
+	description:			Strike/Shooting/Defense Power
+	show statistics:		false
+
+####################### UnitArea
+
+card field:
+	type:		choice
+	name:		unit_type
+	choice:	Earth
+	choice:	Space
+	choice:	Earth-Space
+	description:	The area a unit can be fielded in.
+
+####################### CharacterArea
+
+card field:
+	type:		choice
+	name:		ch_gender
+	choice:		
+	choice:		Male
+	choice:		Female
+	choice:		Other
+	description:	The gender of a Character
+
+card field:
+	type:		choice
+	name:		ch_age
+	choice:		
+	choice:		Adult
+	choice:		Child
+	choice:		Robot
+	description:	The age of a Character
+
+card field:
+	type:		choice
+	name:		ch_type
+	choice:		
+	choice:		New Type
+	choice:		Coordinator
+	choice:		Robot
+	description:	The gender of a Character
+
+####################### Copyright stuff
+
+card field:
+	type:			text
+	name:			illustrator
+	position hint:		210
+	description:		Illustrator of this card
+	show statistics:	false
+
+card field:
+	type:			text
+	name:			set
+	save value:		false
+	description:		Set Name
+	default:		set.Set_Code
+	editable:		false

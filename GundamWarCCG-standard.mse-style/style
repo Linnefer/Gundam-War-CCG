@@ -1,0 +1,328 @@
+﻿mse version:	2.0.0
+game:			GundamWarCCG
+short name:		GW
+full name:		GundamWarCCG
+icon:			card_sample.png
+position hint:	001
+
+version:		2023-12-04
+depends on:	GundamWarCCG.mse-game 2023-12-04
+
+card width:	750
+card height:	1046
+card dpi:	600
+
+
+init script:
+	Image		:=	{ "cards/"+ card.faction_color + "/" + card.type + ".png" }
+	commonhide	:=	{"760"}	
+	cardcoloring	:= 	{ "white" }
+
+	layouter	:=	{case card.type of
+					"Generation":	input.0,
+					"Unit":		input.1,
+					"Character":	input.2,
+					"Command":	input.3,
+					"Operation":	input.4,
+					else:		input.4
+				}
+
+	
+
+####################### Card Field Looks
+
+card style:
+	type:
+		left:			0
+		top:			0
+		width:			750
+		height:			1046
+		z index: 		2
+		popup style:		in place
+		render style:		image
+		image:			{Image()}
+
+card style:
+	corps:
+		left:			{layouter([600,435,435,435,435])}
+		width:			{layouter([100,42,42,42,42])}
+		top:			30
+		height:			{layouter([100,42,42,42,42])}
+		z index:		21
+		visible:		true
+		popup style:		in place
+		render style:		image
+		image:			{ "faction/" + input + ".png"}
+
+card style:
+	corps_power:
+		left:			{layouter([commonhide(),467,467,467,467])}
+		width:			42
+		top:			30
+		height:			42
+		z index:		22
+		visible:		true
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Amuro Italic
+			size:		40
+			scale down to:	22
+			color:		white
+
+card style:
+	generator_power:
+		left:			{layouter([commonhide(),577,577,577,577])}
+		width:			42
+		top:			30
+		height:			42
+		z index:		22
+		visible:		true
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Amuro Italic
+			size:		40
+			scale down to:	22
+			color:		white
+
+card style:
+	play_cost:
+		left:			{layouter([commonhide(),656,656,656,656])}
+		width:			42
+		top:			30
+		height:			42
+		z index:		22
+		visible:		true
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Amuro Italic
+			size:		40
+			scale down to:	22
+			color:		white
+
+
+############# Lower Half
+
+
+card style:
+	full_name:
+		left:		{layouter([120,120,120,120,120])}
+		top:		{layouter([740,740,740,740,740])}
+		width:		{layouter([400,400,400,400,400])}
+		height:		{layouter([50,50,50,50,50])}
+		z index:		21
+		alignment:		left middle shrink-overflow
+		font:
+			name:		Amuro Italic
+			size:		30
+			scale down to:	22
+			color:		white
+
+card style:
+	unit_type:
+		left:		{layouter([commonhide(),552,commonhide(),commonhide(),commonhide()])}
+		top:			740
+		width:			140
+		height:			50
+		z index:		21
+		popup style:		in place
+		render style:		image
+		image:			{ "symbol/" + input + "Type.png"}
+
+card style:
+	image:
+		visible:	true
+		left:			{layouter([commonhide(),0,commonhide(),commonhide(),commonhide()])}
+		top:			{layouter([0,0,0,0,0])}
+		width:			{layouter([100,750,100,100,100])}
+		height:			{layouter([100,706,100,100,100])}
+		z index:		11
+		mask:			{ "cards/mask/" + card.type +".png"}
+
+
+####################### Text box
+
+card style:
+	flavor_text:
+		left:			50
+		top:			625
+		width:			650
+		height:			60
+		z index:		25
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Covid19
+			size:		12
+			scale down to:	10
+			color:		white
+card style: 
+	textbox: 
+		left:			{layouter([commonhide(),0,commonhide(),commonhide(),commonhide()])}
+		top:			{layouter([300,608,300,300,300])}
+		width:			{layouter([100,750,100,100,100])}
+		height:			{layouter([100,91,100,100,100])}
+		z index:		20
+		render style: 	image
+		image:		{"cards/textboxes/"+ card.faction_color+ ".png"}
+		choice images:
+			: {"cards/shadows/"+ card.faction_color+ "/" + card.type + ".png"}
+
+card style:
+	effect:
+		left:			{layouter([120,120,120,120,120])}
+		top:			{layouter([800,800,800,800,800])}
+		width:			{layouter([578,578,578,578,578])}
+		height:			{layouter([197,197,179,179,179])}
+		z index:		25
+		alignment:		{layouter(["left middle shrink-overflow","left middle shrink-overflow","center middle shrink-overflow","left middle shrink-overflow","left middle shrink-overflow"])}
+		font:
+			name:		Covid19
+			size:		20
+			scale down to:	12
+			color:		white
+
+####################### S S D
+card style:
+	strike:
+		left:			{layouter([commonhide(),20,20,commonhide(),commonhide()])}
+		top:			{layouter([0,742,742,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,50,0,0])}
+		z index:		21
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Covid19
+			size:		30
+			scale down to:	22
+			color:		white
+card style:
+	shooting:
+		left:			{layouter([commonhide(),20,20,commonhide(),commonhide()])}
+		top:			{layouter([0,839,839,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,50,0,0])}
+		z index:		21
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Covid19
+			size:		30
+			scale down to:	22
+			color:		white
+card style:
+	defense:
+		left:			{layouter([commonhide(),20,20,commonhide(),commonhide()])}
+		top:			{layouter([0,934,934,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,50,0,0])}
+		z index:		21
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Covid19
+			size:		30
+			scale down to:	22
+			color:		white
+
+####################### Characteristics
+
+card style:
+	ch_gender:
+		left:			{layouter([commonhide(),commonhide(),680,commonhide(),commonhide()])}
+		top:			{layouter([0,742,742,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,50,0,0])}
+		z index:		25
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Covid19
+			size:		30
+			scale down to:	22
+			color:		white
+card style:
+	ch_age:
+		left:			{layouter([commonhide(),commonhide(),680,commonhide(),commonhide()])}
+		top:			{layouter([0,839,839,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,50,0,0])}
+		z index:		25
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Covid19
+			size:		30
+			scale down to:	22
+			color:		white
+card style:
+	ch_type:
+		left:			{layouter([commonhide(),commonhide(),680,commonhide(),commonhide()])}
+		top:			{layouter([0,934,934,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,50,0,0])}
+		z index:		25
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Covid19
+			size:		30
+			scale down to:	22
+			color:		white
+
+####################### Lower bar
+
+card style:
+	rarity:
+		render style: image
+		left:			10
+		bottom:			1042
+		width:			20
+		height:			20
+		z index: 		30
+		image:			{"symbol/" + input + "Rarity.png"}
+
+card style:
+	type_code:
+		left:			22
+		bottom:			1042
+		width:			40
+		height:			20
+		z index:		20
+		alignment:		right middle shrink-overflow
+		font:
+			name:				Covid19
+			size:				12
+			color:				white
+
+card style:
+	list_number:
+		left:			62
+		bottom:			1042
+		width:			38
+		height:			20
+		z index:		20
+		alignment:		left middle shrink-overflow
+		font:
+			name:				Covid19
+			size:				12
+			color:				white
+
+card style:
+	set:
+		right:			740
+		bottom:			1042
+		left:			100
+		height:			20
+		z index:		20
+		alignment:		right middle shrink-overflow
+		font:
+			name:				Covid19
+			size:				12
+			color:				white
+
+card style:
+	illustrator:
+		right:			650
+		bottom:			1042
+		left:			100
+		height:			20
+		z index:		21
+		alignment:		center middle shrink-overflow
+		font:
+			name:				Covid19
+			size:				12
+			color:				White
