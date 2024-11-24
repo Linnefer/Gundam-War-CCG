@@ -9,7 +9,7 @@ version:		2023-12-04
 depends on:	GundamWarCCG.mse-game 2023-12-04
 
 card width:	750
-card height:	1046
+card height:	1063
 card dpi:	600
 
 
@@ -36,18 +36,62 @@ card style:
 		left:			0
 		top:			0
 		width:			750
-		height:			1046
+		height:			1063
 		z index: 		2
 		popup style:		in place
 		render style:		image
 		image:			{Image()}
 
 card style:
+	typetext:
+		left:	29
+		top:	14
+		height:	70
+		width:	500
+		z index:		25
+		visible:		true
+		alignment:		left middle
+		font:
+			name:		Armada
+			size:		35
+			scale down to:	22
+			color:		white
+card style:
+	set_on:
+		left:	29
+		top:	74
+		height:	30
+		width:	200
+		z index:		25
+		visible:		true
+		alignment:		left middle
+		font:
+			name:		Armada
+			size:		25
+			scale down to:	22
+			color:		white
+
+
+card style:
+	eratext:
+		left:	{layouter([30,commonhide(),commonhide(),commonhide(),commonhide()])}
+		top:	660
+		height:	94
+		right:	720
+		z index:		25
+		visible:		true
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Armada
+			size:		70
+			scale down to:	22
+			color:		white
+card style:
 	corps:
-		left:			{layouter([600,435,435,435,435])}
-		width:			{layouter([100,42,42,42,42])}
+		left:			{layouter([575,435,435,435,435])}
+		width:			{layouter([150,42,42,42,42])}
 		top:			30
-		height:			{layouter([100,42,42,42,42])}
+		height:			{layouter([150,42,42,42,42])}
 		z index:		21
 		visible:		true
 		popup style:		in place
@@ -64,7 +108,7 @@ card style:
 		visible:		true
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Amuro Italic
+			name:		Armada
 			size:		40
 			scale down to:	22
 			color:		{ if card.faction_color == "White" then "black" else "white"}
@@ -79,7 +123,22 @@ card style:
 		visible:		true
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Amuro Italic
+			name:		Armada
+			size:		40
+			scale down to:	22
+			color:		white
+
+card style:
+	generator_dot:
+		left:			{layouter([commonhide(),545,545,545,545])}
+		width:			42
+		top:			27
+		height:			42
+		z index:		22
+		visible:		true
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Armada
 			size:		40
 			scale down to:	22
 			color:		white
@@ -94,64 +153,34 @@ card style:
 		visible:		true
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Amuro Italic
+			name:		Armada
 			size:		40
 			scale down to:	22
 			color:		white
 
-
-############# Lower Half
-
-
-card style:
-	full_name:
-		left:		{layouter([30,120,175,80,80])}
-		top:		{layouter([745,740,740,800,800])}
-		width:		{layouter([610,400,400,400,400])}
-		height:		{layouter([50,50,50,50,50])}
-		z index:		21
-		alignment:		{layouter(["left middle shrink-overflow","left middle shrink-overflow","center middle shrink-overflow","left middle shrink-overflow","left middle shrink-overflow"])}
-		font:
-			name:		Amuro Italic
-			size:		30
-			scale down to:	22
-			color:		{ if card.faction_color == "White" then "black" else "white"}
-
-card style:
-	unit_type:
-		left:		{layouter([commonhide(),552,commonhide(),commonhide(),commonhide()])}
-		top:			740
-		width:			140
-		height:			50
-		z index:		21
-		popup style:		in place
-		render style:		image
-		image:			{ "symbol/" + input + "Type.png"}
+############# Image Area
 
 card style:
 	image:
 		visible:	true
-		left:			{layouter([commonhide(),0,commonhide(),commonhide(),commonhide()])}
-		top:			{layouter([0,0,0,0,0])}
-		width:			{layouter([100,750,100,100,100])}
-		height:			{layouter([100,706,100,100,100])}
+		left:			{layouter([50,0,0,47,47])}
+		top:			{layouter([112,0,122,117,117])}
+		width:			{layouter([682,750,750,664,664])}
+		height:			{layouter([541,708,633,583,583])}
 		z index:		11
 		mask:			{ "cards/mask/" + card.type +".png"}
 
-
-####################### Text box
-
 card style:
 	flavor_text:
-		left:			50
-		top:			625
-		width:			650
-		height:			60
+		left:			{layouter([commonhide(),50,50,103,103])}
+		top:			{layouter([625,625,650,660,660])}
+		width:			{layouter([650,650,650,540,540])}
+		height:			{layouter([60,60,90,90,90])}
 		z index:		25
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Covid19
-			size:		12
+			name:		Asimov Print
+			size:		16
 			scale down to:	10
 			color:		{ if card.faction_color == "Black" then "black" else "white"}
 card style: 
@@ -166,16 +195,44 @@ card style:
 		choice images:
 			: {"cards/shadows/"+ card.faction_color+ "/" + card.type + ".png"}
 
+############# Lower Area
+
+
+card style:
+	full_name:
+		left:		{layouter([30,120,175,80,80])}
+		top:		{layouter([755,750,780,810,810])}
+		width:		{layouter([610,400,400,400,400])}
+		height:		{layouter([80,50,50,50,50])}
+		z index:		21
+		alignment:		{layouter(["left middle shrink-overflow","left middle shrink-overflow","center middle shrink-overflow","left middle shrink-overflow","left middle shrink-overflow"])}
+		font:
+			name:		Armada
+			size:		30
+			scale down to:	22
+			color:		{ if card.faction_color == "White" then "black" else "white" }
+
+card style:
+	unit_type:
+		left:		{layouter([commonhide(),555,commonhide(),commonhide(),commonhide()])}
+		top:			750
+		width:			140
+		height:			50
+		z index:		50
+		popup style:		in place
+		render style:		image
+		image:			{ "symbol/" + input + "Type.png"}
+
 card style:
 	effect:
 		left:			{layouter([30,120,120,80,80])}
-		top:			{layouter([800,800,800,850,850])}
+		top:			{layouter([835,812,830,860,860])}
 		width:			{layouter([610,578,510,600,600])}
-		height:			{layouter([160,197,179,150,150])}
+		height:			{layouter([140,200,179,150,150])}
 		z index:		25
 		alignment:		{layouter(["left middle shrink-overflow","left middle shrink-overflow","center middle shrink-overflow","left middle shrink-overflow","left middle shrink-overflow"])}
 		font:
-			name:		Covid19
+			name:		Asimov Print
 			size:		20
 			scale down to:	12
 			color:		{ if card.faction_color == "White" then "black" else "white"}
@@ -183,40 +240,40 @@ card style:
 ####################### S S D
 card style:
 	strike:
-		left:			{layouter([commonhide(),20,165,commonhide(),commonhide()])}
-		top:			{layouter([0,742,780,0,0])}
+		left:			{layouter([commonhide(),20,160,commonhide(),commonhide()])}
+		top:			{layouter([0,750,790,0,0])}
 		width:			{layouter([0,60,60,0,0])}
-		height:			{layouter([0,50,50,0,0])}
+		height:			{layouter([0,60,60,0,0])}
 		z index:		21
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Armada
 			size:		30
 			scale down to:	22
 			color:		{ if card.faction_color == "White" then "black" else "white"}
 card style:
 	shooting:
-		left:			{layouter([commonhide(),20,115,commonhide(),commonhide()])}
-		top:			{layouter([0,839,830,0,0])}
+		left:			{layouter([commonhide(),20,106,commonhide(),commonhide()])}
+		top:			{layouter([0,845,839,0,0])}
 		width:			{layouter([0,60,60,0,0])}
-		height:			{layouter([0,50,50,0,0])}
+		height:			{layouter([0,60,60,0,0])}
 		z index:		21
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Armada
 			size:		30
 			scale down to:	22
 			color:		{ if card.faction_color == "White" then "black" else "white"}
 card style:
 	defense:
-		left:			{layouter([commonhide(),20,60,commonhide(),commonhide()])}
-		top:			{layouter([0,934,881,0,0])}
+		left:			{layouter([commonhide(),20,54,commonhide(),commonhide()])}
+		top:			{layouter([0,940,888,0,0])}
 		width:			{layouter([0,60,60,0,0])}
-		height:			{layouter([0,50,50,0,0])}
+		height:			{layouter([0,60,60,0,0])}
 		z index:		21
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Armada
 			size:		30
 			scale down to:	22
 			color:		{ if card.faction_color == "White" then "black" else "white"}
@@ -224,44 +281,85 @@ card style:
 ####################### Characteristics
 
 card style:
+	c_gender:
+		left:			{layouter([commonhide(),commonhide(),530,commonhide(),commonhide()])}
+		top:			{layouter([0,742,790,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,60,0,0])}
+		z index:		24
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Asimov Print
+			size:		30
+			scale down to:	22
+			color:		{ if card.faction_color == "White" then "black" else "white"}
+
+card style:
+	c_age:
+		left:			{layouter([commonhide(),commonhide(),582,commonhide(),commonhide()])}
+		top:			{layouter([0,839,839,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,60,0,0])}
+		z index:		24
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Asimov Print
+			size:		30
+			scale down to:	22
+			color:		{ if card.faction_color == "White" then "black" else "white"}
+card style:
+	c_type:
+		left:			{layouter([commonhide(),commonhide(),635,commonhide(),commonhide()])}
+		top:			{layouter([0,934,888,0,0])}
+		width:			{layouter([0,60,60,0,0])}
+		height:			{layouter([0,50,60,0,0])}
+		z index:		24
+		alignment:		center middle shrink-overflow
+		font:
+			name:		Asimov Print
+			size:		30
+			scale down to:	22
+			color:		{ if card.faction_color == "White" then "black" else "white"}
+
+card style:
 	ch_gender:
 		left:			{layouter([commonhide(),commonhide(),530,commonhide(),commonhide()])}
-		top:			{layouter([0,742,780,0,0])}
+		top:			{layouter([0,742,790,0,0])}
 		width:			{layouter([0,60,60,0,0])}
-		height:			{layouter([0,50,50,0,0])}
+		height:			{layouter([0,50,60,0,0])}
 		z index:		25
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Armada
 			size:		30
 			scale down to:	22
-			color:		{ if card.faction_color == "White" then "black" else "white"}
+			color:		transparent
 card style:
 	ch_age:
-		left:			{layouter([commonhide(),commonhide(),585,commonhide(),commonhide()])}
-		top:			{layouter([0,839,830,0,0])}
+		left:			{layouter([commonhide(),commonhide(),582,commonhide(),commonhide()])}
+		top:			{layouter([0,839,839,0,0])}
 		width:			{layouter([0,60,60,0,0])}
-		height:			{layouter([0,50,50,0,0])}
+		height:			{layouter([0,50,60,0,0])}
 		z index:		25
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Armada
 			size:		30
 			scale down to:	22
-			color:		{ if card.faction_color == "White" then "black" else "white"}
+			color:		transparent
 card style:
 	ch_type:
-		left:			{layouter([commonhide(),commonhide(),637,commonhide(),commonhide()])}
-		top:			{layouter([0,934,881,0,0])}
+		left:			{layouter([commonhide(),commonhide(),635,commonhide(),commonhide()])}
+		top:			{layouter([0,934,888,0,0])}
 		width:			{layouter([0,60,60,0,0])}
-		height:			{layouter([0,50,50,0,0])}
+		height:			{layouter([0,50,60,0,0])}
 		z index:		25
 		alignment:		center middle shrink-overflow
 		font:
-			name:		Covid19
+			name:		Armada
 			size:		30
 			scale down to:	22
-			color:		{ if card.faction_color == "White" then "black" else "white"}
+			color:		transparent
 
 ####################### Lower bar
 
@@ -269,60 +367,60 @@ card style:
 	rarity:
 		render style: image
 		left:			10
-		bottom:			1042
-		width:			20
-		height:			20
+		bottom:			1055
+		width:			22
+		height:			22
 		z index: 		30
 		image:			{"symbol/" + input + "Rarity.png"}
 
 card style:
 	type_code:
-		left:			22
-		bottom:			1042
+		left:			32
+		bottom:			1055
 		width:			40
 		height:			20
 		z index:		20
 		alignment:		right middle shrink-overflow
 		font:
-			name:				Covid19
+			name:				Asimov Print
 			size:				12
 			color:				white
 
 card style:
 	list_number:
-		left:			62
-		bottom:			1042
-		width:			38
+		left:			72
+		bottom:			1055
+		right:			100
 		height:			20
 		z index:		20
 		alignment:		left middle shrink-overflow
 		font:
-			name:				Covid19
+			name:				Asimov Print
 			size:				12
 			color:				white
 
 card style:
 	set:
 		right:			740
-		bottom:			1042
+		bottom:			1055
 		left:			100
 		height:			20
 		z index:		20
 		alignment:		right middle shrink-overflow
 		font:
-			name:				Covid19
+			name:				Asimov Print
 			size:				12
 			color:				white
 
 card style:
 	illustrator:
 		right:			650
-		bottom:			1042
+		bottom:			1055
 		left:			100
 		height:			20
 		z index:		21
 		alignment:		center middle shrink-overflow
 		font:
-			name:				Covid19
+			name:				Asimov Print
 			size:				12
 			color:				White

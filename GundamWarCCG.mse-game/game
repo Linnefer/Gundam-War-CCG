@@ -57,6 +57,26 @@ init script:
 			"Purple": "G",
 			else: "X"
 	}
+	code	:= {	case input of
+			"gender":case card.ch_gender of
+				"Male": "M",
+				"Female": "F",
+				"Other": "O"
+				else: "",
+			"age": case card.ch_age of
+				"Adult": "Ad",
+				"Child": "Ch",
+				"Immortal": "Im"
+				"Robot": "R"
+				else: "",
+
+			"type": case card.ch_type of
+				"New Type": "NT",
+				"Coordinator": "Co",
+				"Robot": "R"
+				else: "",
+			else: ""
+	}
 	is_special	:= { contains(card.rarity, match: "Special") }
 	cardtyper	:= { if is_special() then "SP-" else type_code() + faction_code() }
 
@@ -72,6 +92,11 @@ set field:
 	name: Set_Code
 	identifying: true
 
+set field:
+	type: text
+	name: era
+	identifying: true
+	default: "Gundam War"
 
 ####################### Card Field Definitions
 
@@ -106,6 +131,7 @@ card field:
 	type:				text
 	name:				full_name
 	identifying:			false
+	multi line:			true
 	card list visible:		true
 	card list column:		2
 	description:			The name of the card
@@ -133,6 +159,13 @@ card field:
 	multi line:			false
 	card list column:		502
 	description:			The total required generator power
+
+card field:
+	type:		text
+	name:		generator_dot
+	save value:	false
+	editable:	false
+	default:	"●"
 
 ####################### Image
 
@@ -164,6 +197,7 @@ card field:
 	choice:		Titans
 	choice:		Zanscale Empire
 	choice:		Neo Zeon
+	choice:		Crossbone Vanguard
 	choice:		Turn A
 	choice:		Gundam X
 	choice:		Wing Gundam
@@ -191,28 +225,45 @@ card field:
 	description:		The type and layout of the card.
 	card list visible:	true
 	card list column:	4
-	script: 	if card.faction_color == "Purple" then "Generation" else value
+#	script: 	if card.faction_color == "Purple" then "Generation" else value
 	choice:	
 		name:	Generation
 		enabled: true
 	choice:			
 		name:	Unit
-		enabled: {card.faction_color != "Purple"}
+#		enabled: {card.faction_color != "Purple"}
 	choice:	
 		name:	Character
-		enabled: {card.faction_color != "Purple"}
+#		enabled: {card.faction_color != "Purple"}
 	choice:	
 		name:	Command
-		enabled: {card.faction_color != "Purple"}
+#		enabled: {card.faction_color != "Purple"}
 	choice:	
 		name:	Operation
-		enabled: {card.faction_color != "Purple"}
+#		enabled: {card.faction_color != "Purple"}
 
 card field:
 	type:		choice
 	name:		set_on
 	choice:
 	choice:		(UNIT)
+
+card field:
+	type:		text
+	name:		typetext
+	script:		to_upper(card.type)
+	editable:	false
+	save value:		false
+	show statistics:	false
+	
+card field:
+	type:		text
+	name:		eratext
+	script:		to_upper(set.era)
+	editable:	false
+	save value:		false
+	show statistics:	false
+	
 
 card field:
 	type:		choice
@@ -307,6 +358,7 @@ card field:
 	choice:		
 	choice:		Adult
 	choice:		Child
+	choice:		Immortal
 	choice:		Robot
 	description:	The age of a Character
 
@@ -318,6 +370,27 @@ card field:
 	choice:		Coordinator
 	choice:		Robot
 	description:	The gender of a Character
+
+card field:
+	type:		text
+	name:		c_gender
+	save value:	false
+	editable:	false
+	script:	code("gender")
+
+card field:
+	type:		text
+	name:		c_age
+	save value:	false
+	editable:	false
+	script:	code("age")
+
+card field:
+	type:		text
+	name:		c_type
+	save value:	false
+	editable:	false
+	script:	code("type")
 
 ####################### Copyright stuff
 
