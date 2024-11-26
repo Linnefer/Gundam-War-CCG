@@ -1,0 +1,287 @@
+﻿mse version: 2.0.0
+version: 2024-09-29
+short name: Specs
+depends on:
+	package: GundamWarCCG.mse-game
+	version: 2023-12-04
+
+image font size: 30
+scale text: true
+horizontal space: 0
+
+##### Timings
+symbol:
+	code: (Assault)
+	image: Assault.png
+symbol:
+	code: (AtmosphericEntry)
+	image: AtmosphericEntry.png
+symbol:
+	code: (Base)
+	image: Base.png
+symbol:
+	code: (Battleship)
+	image: Battleship.png
+symbol:
+	code: (Desert)
+	image: Desert.png
+symbol:
+	code: (Family)
+	image: Family.png
+symbol:
+	code: (Prevent1)
+	image: Prevent1.png
+symbol:
+	code: (Prevent2)
+	image: Prevent2.png
+symbol:
+	code: (Prevent3)
+	image: Prevent3.png
+symbol:
+	code: (Prevent4)
+	image: Prevent4.png
+symbol:
+	code: (Prevent5)
+	image: Prevent5.png
+symbol:
+	code: (PreventX)
+	image: PreventX.png
+symbol:
+	code: (PSArmor1)
+	image: PSArmor1.png
+symbol:
+	code: (PSArmor2)
+	image: PSArmor2.png
+symbol:
+	code: (PSArmor3)
+	image: PSArmor3.png
+symbol:
+	code: (PSArmor4)
+	image: PSArmor4.png
+symbol:
+	code: (PSArmor5)
+	image: PSArmor5.png
+symbol:
+	code: (PSArmorX)
+	image: PSArmorX.png
+symbol:
+	code: (Psycommu1)
+	image: Psycommu1.png
+symbol:
+	code: (Psycommu2)
+	image: Psycommu2.png
+symbol:
+	code: (Psycommu3)
+	image: Psycommu3.png
+symbol:
+	code: (Psycommu4)
+	image: Psycommu4.png
+symbol:
+	code: (Psycommu5)
+	image: Psycommu5.png
+symbol:
+	code: (PsycommuX)
+	image: PsycommuX.png
+symbol:
+	code: (1Card)
+	image: 1CR.png
+symbol:
+	code: (1CardTurn)
+	image: 1CRT.png
+symbol:
+	code: (1CardOwn)
+	image: 1CRO.png
+symbol:
+	code: (1CardDeck)
+	image: 1CRD.png
+symbol:
+	code: (Quick)
+	image: Quick.png
+symbol:
+	code: (SOCharacter)
+	image: SOCharacter.png
+symbol:
+	code: (SOGeneration)
+	image: SOGeneration.png
+symbol:
+	code: (SShield1)
+	image: SShield1.png
+symbol:
+	code: (SShield2)
+	image: SShield2.png
+symbol:
+	code: (SShield3)
+	image: SShield3.png
+symbol:
+	code: (SShield4)
+	image: SShield4.png
+symbol:
+	code: (SShield5)
+	image: SShield5.png
+symbol:
+	code: (SShieldX)
+	image: SShieldX.png
+symbol:
+	code: (Support)
+	image: Support.png
+symbol:
+	code: (Supply1)
+	image: Supply1.png
+symbol:
+	code: (Supply2)
+	image: Supply2.png
+symbol:
+	code: (Supply3)
+	image: Supply3.png
+symbol:
+	code: (Supply4)
+	image: Supply4.png
+symbol:
+	code: (Supply5)
+	image: Supply5.png
+symbol:
+	code: (SupplyX)
+	image: SupplyX.png
+symbol:
+	code: (Transform)
+	image: Transform.png
+symbol:
+	code: (Voucher)
+	image: Voucher.png
+symbol:
+	code: (WRW1)
+	image: WRW1.png
+symbol:
+	code: (WRW2)
+	image: WRW2.png
+symbol:
+	code: (WRW3)
+	image: WRW3.png
+symbol:
+	code: (WRW4)
+	image: WRW4.png
+symbol:
+	code: (WRW5)
+	image: WRW5.png
+symbol:
+	code: (WRWX)
+	image: WRWX.png
+symbol:
+	code: (SpaceMobility1)
+	image: SpaceMobility1.png
+symbol:
+	code: (SpaceMobility2)
+	image: SpaceMobility2.png
+symbol:
+	code: (SpaceMobility3)
+	image: SpaceMobility3.png
+symbol:
+	code: (SpaceMobility4)
+	image: SpaceMobility4.png
+symbol:
+	code: (SpaceMobility5)
+	image: SpaceMobility5.png
+symbol:
+	code: (SpaceMobilityX)
+	image: SpaceMobilityX.png
+symbol:
+	code: (PreemptiveAttack)
+	image: PreemptiveAttack.png
+symbol:
+	code: (WaterMobility)
+	image: WaterMobility.png
+symbol:
+	code: (HighMobility)
+	image: HighMobility.png
+
+##############################################################
+# Insert-symbol menu
+insert symbol menu:
+	item: (Base)
+	item: (Battleship)
+	item: (Quick)
+	item: (Support)
+	item: (Transform)
+	item: (Voucher)
+	item:	
+		item: (BBooster001)
+		item: (BBooster010)
+		item: (BBooster100)
+		item: (BBooster555)
+	item: (Family)
+	item:
+		name: Defense
+		item:
+			name: Prevent
+			item: (Prevent1)
+			item: (Prevent2)
+			item: (Prevent3)
+			item: (Prevent4)
+			item: (Prevent5)
+			item: (PreventX)
+		item:
+			name: PS Armor
+			item: (PSArmor1)
+			item: (PSArmor2)
+			item: (PSArmor3)
+			item: (PSArmor4)
+			item: (PSArmor5)
+			item: (PSArmorX)
+		item:
+			name: Special Shield
+			item: (SShield1)
+			item: (SShield2)
+			item: (SShield3)
+			item: (SShield4)
+			item: (SShield5)
+			item: (SShieldX)
+	item:
+		name: Offense
+		item: (Assault)
+		item: (PreemptiveAttack)
+		item:
+			name: Psycommu
+			item: (Psycommu1)
+			item: (Psycommu2)
+			item: (Psycommu3)
+			item: (Psycommu4)
+			item: (Psycommu5)
+			item: (PsycommuX)
+		item:
+			name: Wide Range Weapon
+			item: (WRW1)
+			item: (WRW2)
+			item: (WRW3)
+			item: (WRW4)
+			item: (WRW5)
+			item: (WRWX)
+	item:	
+		name: Restrictions
+		item: (1Card)
+		item: (1CardOwn)
+		item: (1CardDeck)
+		item: (1CardTurn)
+	item:
+		name: Set-On
+		item: (SOGeneration)
+		item: (SOCharacter)
+	item:
+		name: Supply
+		item: (Supply1)
+		item: (Supply2)
+		item: (Supply3)
+		item: (Supply4)
+		item: (Supply5)
+		item: (SupplyX)
+	item:
+		name: Terrain
+		item: (AtmosphericEntry)
+		item: (Desert)
+		item: (HighMobility)
+		item: (Water Mobility)
+		item: (SpaceMobility1)
+		item: (SpaceMobility2)
+		item: (SpaceMobility3)
+		item: (SpaceMobility3)
+		item: (SpaceMobility5)
+		item: (SpaceMobilityX)

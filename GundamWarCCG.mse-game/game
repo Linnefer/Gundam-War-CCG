@@ -6,6 +6,7 @@ icon: card-back.png
 position hint: 01
 
 version: 2023-12-04
+depends on:	GundamWarCCG-Specs.mse-symbol-font 2023-12-04
 
 
 ####################### Card Function Definitions

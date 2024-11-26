@@ -7,6 +7,7 @@ position hint:	001
 
 version:		2023-12-04
 depends on:	GundamWarCCG.mse-game 2023-12-04
+depends on:	GundamWarCCG-Specs.mse-symbol-font 2023-12-04
 
 card width:	750
 card height:	1063
@@ -166,7 +167,7 @@ card style:
 		left:			{layouter([50,0,0,47,47])}
 		top:			{layouter([112,0,122,117,117])}
 		width:			{layouter([682,750,750,664,664])}
-		height:			{layouter([541,708,633,583,583])}
+		height:			{layouter([541,720,633,583,583])}
 		z index:		11
 		mask:			{ "cards/mask/" + card.type +".png"}
 
@@ -236,6 +237,9 @@ card style:
 			size:		20
 			scale down to:	12
 			color:		{ if card.faction_color == "White" then "black" else "white"}
+		symbol font:
+			name: GundamWarCCG-Specs
+			size: 20
 
 ####################### S S D
 card style:
