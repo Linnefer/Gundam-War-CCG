@@ -203,12 +203,6 @@ insert symbol menu:
 	item: (Support)
 	item: (Transform)
 	item: (Voucher)
-	item:	
-		item: (BBooster001)
-		item: (BBooster010)
-		item: (BBooster100)
-		item: (BBooster555)
-	item: (Family)
 	item:
 		name: Defense
 		item:
@@ -255,16 +249,19 @@ insert symbol menu:
 			item: (WRW4)
 			item: (WRW5)
 			item: (WRWX)
-	item:	
-		name: Restrictions
-		item: (1Card)
-		item: (1CardOwn)
-		item: (1CardDeck)
-		item: (1CardTurn)
 	item:
-		name: Set-On
-		item: (SOGeneration)
-		item: (SOCharacter)
+		name: Characters
+		item: (Family)
+		item:	
+			name: Battleship Boosters
+			item: (BBooster001)
+			item: (BBooster010)
+			item: (BBooster100)
+			item: (BBooster555)
+		item:
+			name: Set-On
+			item: (SOGeneration)
+			item: (SOCharacter)
 	item:
 		name: Supply
 		item: (Supply1)
@@ -278,10 +275,16 @@ insert symbol menu:
 		item: (AtmosphericEntry)
 		item: (Desert)
 		item: (HighMobility)
-		item: (Water Mobility)
+		item: (WaterMobility)
 		item: (SpaceMobility1)
 		item: (SpaceMobility2)
 		item: (SpaceMobility3)
 		item: (SpaceMobility3)
 		item: (SpaceMobility5)
 		item: (SpaceMobilityX)
+	item:	
+		name: Restrictions
+		item: (1Card)
+		item: (1CardOwn)
+		item: (1CardDeck)
+		item: (1CardTurn)
