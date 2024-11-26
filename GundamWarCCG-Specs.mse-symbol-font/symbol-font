@@ -193,6 +193,34 @@ symbol:
 symbol:
 	code: (HighMobility)
 	image: HighMobility.png
+symbol:
+	code: (BBooster)
+	image: BBooster.png
+symbol:
+	code: (0)
+	image: 0.png
+symbol:
+	code: (1)
+	image: 1.png
+symbol:
+	code: (2)
+	image: 2.png
+symbol:
+	code: (3)
+	image: 3.png
+symbol:
+	code: (4)
+	image: 4.png
+symbol:
+	code: (5)
+	image: 5.png
+symbol:
+	code: (/)
+	image: SLASH.png
+symbol:
+	code: (End)
+	image: End.png
+
 
 ##############################################################
 # Insert-symbol menu
@@ -254,10 +282,15 @@ insert symbol menu:
 		item: (Family)
 		item:	
 			name: Battleship Boosters
-			item: (BBooster001)
-			item: (BBooster010)
-			item: (BBooster100)
-			item: (BBooster555)
+			item: (BBooster)
+			item: (0)
+			item: (1)
+			item: (2)
+			item: (3)
+			item: (4)
+			item: (5)
+			item: (/)
+			item: (End)
 		item:
 			name: Set-On
 			item: (SOGeneration)
