@@ -242,6 +242,42 @@ symbol:
 	code: (Switch)
 	image: Switch.png
 
+symbol:
+	code: (Auto)
+	image: Auto.png
+symbol:
+	code: (Begin)
+	image: Begin.png
+symbol:
+	code: (Cut-In)
+	image: CutIn.png
+symbol:
+	code: (Designate)
+	image: Designate.png
+
+
+symbol:
+	code: (black)
+	image: black.png
+symbol:
+	code: (white)
+	image: white.png
+symbol:
+	code: (blue)
+	image: blue.png
+symbol:
+	code: (brown)
+	image: brown.png
+symbol:
+	code: (red)
+	image: red.png
+symbol:
+	code: (green)
+	image: green.png
+symbol:
+	code: (purple)
+	image: purple.png
+
 ##############################################################
 # Insert-symbol menu
 insert symbol menu:
@@ -300,7 +336,7 @@ insert symbol menu:
 			item: (WRW5)
 			item: (WRWX)
 	item:
-		name: Characters
+		name: Character Traits
 		item: (Family)
 		item:	
 			name: Battleship Boosters
@@ -326,7 +362,7 @@ insert symbol menu:
 		item: (Supply5)
 		item: (SupplyX)
 	item:
-		name: Terrain & Mobility
+		name: Terrain / Mobility
 		item: (AtmosphericEntry)
 		item: (Desert)
 		item: (Tire)
@@ -339,10 +375,25 @@ insert symbol menu:
 		item: (SpaceMobility5)
 		item: (SpaceMobilityX)
 	item:	
-		name: Costs & Restrictions
+		name: Costs / Restrictions
 		item: (AdditionalCost)
 		item: (AlternateCost)
 		item: (1Card)
 		item: (1CardOwn)
 		item: (1CardDeck)
 		item: (1CardTurn)
+	item:
+		name: Timing
+		item: (Auto)
+		item: (Begin)
+		item: (Cut-In)
+		item: (Designate)
+	item:	
+		name: Color
+		item: (black)
+		item: (white)
+		item: (blue)
+		item: (brown)
+		item: (red)
+		item: (green)
+		item: (purple)
