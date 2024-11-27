@@ -1,33 +1,19 @@
-# Gundam-War-CCR
- 
+== proper export string ==
 
-Design Notes:
-* faction_color (Blue, Green, Black, Red, Brown, White)
-* type (Unit, CHaracter, Command, Operation, Generation)
-* Subline (""/"(Unit)")
+{card.type_code}{card.list_number} {card.full_name}.pngwww
 
 
-* full_name
-* Effect
-* Rarity Field (" "/U/R/UR)
-* Card number: Type - FactionNumber (unprefixed!) // SP (choice?)
-* Set Code (bottom Right)
+== Missing ==
 
-Generation:
-* Corps Symbol
+* Tag: Colony
+* Tag: Tire
 
-All but Generation:
-* flavor_text
+* Tag: Multiple
+* Tag: Switch
+* Tag: Alternate Cost
+* Tag: Additional Cost
 
-* Corps Generator Power #
-* Corps Symbol check
-* Total Generator Power
-* Card Cost
-
-* U/CH: Strike Points
-* U/CH: Shooting Points
-* U/CH: Defense Points
-* Unit Type (E/SP/E SP)
-* CH: Designation: (M/F) (Ad/Ch) (""/NT/CO)
+* Japansese Tags without translation
 
 
+== Bugs ==
