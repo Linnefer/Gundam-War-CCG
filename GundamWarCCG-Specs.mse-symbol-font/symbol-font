@@ -222,13 +222,35 @@ symbol:
 	image: End.png
 
 
+symbol:
+	code: (Tire)
+	image: Tire.png
+symbol:
+	code: (Colony)
+	image: Colony.png
+
+symbol:
+	code: (AdditionalCost)
+	image: AddCost.png
+symbol:
+	code: (AlternateCost)
+	image: AltCost.png
+symbol:
+	code: (Multiple)
+	image: Multiple.png
+symbol:
+	code: (Switch)
+	image: Switch.png
+
 ##############################################################
 # Insert-symbol menu
 insert symbol menu:
 	item: (Base)
 	item: (Battleship)
+	item: (Colony)
 	item: (Quick)
 	item: (Support)
+	item: (Switch)
 	item: (Transform)
 	item: (Voucher)
 	item:
@@ -304,9 +326,10 @@ insert symbol menu:
 		item: (Supply5)
 		item: (SupplyX)
 	item:
-		name: Terrain
+		name: Terrain & Mobility
 		item: (AtmosphericEntry)
 		item: (Desert)
+		item: (Tire)
 		item: (HighMobility)
 		item: (WaterMobility)
 		item: (SpaceMobility1)
@@ -316,7 +339,9 @@ insert symbol menu:
 		item: (SpaceMobility5)
 		item: (SpaceMobilityX)
 	item:	
-		name: Restrictions
+		name: Costs & Restrictions
+		item: (AdditionalCost)
+		item: (AlternateCost)
 		item: (1Card)
 		item: (1CardOwn)
 		item: (1CardDeck)

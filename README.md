@@ -4,15 +4,24 @@
 
 == Missing ==
 
-* Tag: Colony
-* Tag: Tire
 
-* Tag: Multiple
-* Tag: Switch
-* Tag: Alternate Cost
-* Tag: Additional Cost
+
 
 * Japansese Tags without translation
 
 
 == Bugs ==
+
+
+=========Changelog========
+
+
+0.9.1
+* Tag: Colony
+* Tag: Tire
+* Tag: Multiple:
+* Tag: Switch:
+* Tag: Alternate Cost:
+* Tag: Additional Cost:
+
+0.9
