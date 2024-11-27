@@ -129,8 +129,19 @@ card field:
 ####################### Name line
 
 card field:
+	type:			text
+	name:			full_name
+	identifying:		false
+	multi line:		false
+	editable:		false
+	card list visible:	false
+	save value:		false
+	script:			card.type_code + card.list_number + " " + card.main_name
+
+
+card field:
 	type:				text
-	name:				full_name
+	name:				main_name
 	identifying:			false
 	multi line:			true
 	card list visible:		true
