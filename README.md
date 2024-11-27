@@ -1,6 +1,5 @@
 == proper export string ==
-
-{card.type_code}{card.list_number} {card.full_name}.pngwww
+{card.full_name}.png
 
 
 == Missing ==
