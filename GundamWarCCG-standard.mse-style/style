@@ -200,7 +200,7 @@ card style:
 
 
 card style:
-	full_name:
+	main_name:
 		left:		{layouter([30,120,175,80,80])}
 		top:		{layouter([755,750,780,810,810])}
 		width:		{layouter([610,400,400,400,400])}
