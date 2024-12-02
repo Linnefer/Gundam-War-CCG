@@ -196,6 +196,18 @@ card style:
 		choice images:
 			: {"cards/shadows/"+ card.faction_color+ "/" + card.type + ".png"}
 
+card style: 
+	SSD-icons: 
+		left:			{layouter([commonhide(),-10,54,commonhide(),commonhide()])}
+		top:			{layouter([0,723,790,0,0])}
+		width:			{layouter([93,93,165,93,93])}
+		height:			{layouter([284,284,160,284,284])}
+		z index:		15
+		render style: 	image
+		choice images:
+			visible: {"symbol/Aid" + if card.type=="Unit" or card.type=="Character" then card.type + ".png" else "None.png"}
+			invisible: symbol/AidNone.png
+
 ############# Lower Area
 
 
@@ -244,8 +256,8 @@ card style:
 ####################### S S D
 card style:
 	strike:
-		left:			{layouter([commonhide(),20,160,commonhide(),commonhide()])}
-		top:			{layouter([0,750,790,0,0])}
+		left:			{layouter([commonhide(),30,160,commonhide(),commonhide()])}
+		top:			{layouter([0,748,790,0,0])}
 		width:			{layouter([0,60,60,0,0])}
 		height:			{layouter([0,60,60,0,0])}
 		z index:		21
@@ -257,7 +269,7 @@ card style:
 			color:		{ if card.faction_color == "White" then "black" else "white"}
 card style:
 	shooting:
-		left:			{layouter([commonhide(),20,106,commonhide(),commonhide()])}
+		left:			{layouter([commonhide(),30,106,commonhide(),commonhide()])}
 		top:			{layouter([0,845,839,0,0])}
 		width:			{layouter([0,60,60,0,0])}
 		height:			{layouter([0,60,60,0,0])}
@@ -270,7 +282,7 @@ card style:
 			color:		{ if card.faction_color == "White" then "black" else "white"}
 card style:
 	defense:
-		left:			{layouter([commonhide(),20,54,commonhide(),commonhide()])}
+		left:			{layouter([commonhide(),30,54,commonhide(),commonhide()])}
 		top:			{layouter([0,940,888,0,0])}
 		width:			{layouter([0,60,60,0,0])}
 		height:			{layouter([0,60,60,0,0])}
