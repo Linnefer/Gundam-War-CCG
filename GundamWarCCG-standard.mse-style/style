@@ -201,7 +201,7 @@ card style:
 		left:			{layouter([commonhide(),-10,54,commonhide(),commonhide()])}
 		top:			{layouter([0,723,790,0,0])}
 		width:			{layouter([93,93,165,93,93])}
-		height:			{layouter([284,284,160,284,284])}
+		height:			{layouter([284,285,160,284,284])}
 		z index:		15
 		render style: 	image
 		choice images:
@@ -260,7 +260,7 @@ card style:
 		top:			{layouter([0,748,790,0,0])}
 		width:			{layouter([0,60,60,0,0])}
 		height:			{layouter([0,60,60,0,0])}
-		z index:		21
+		z index:		30
 		alignment:		center middle shrink-overflow
 		font:
 			name:		Armada
@@ -273,7 +273,7 @@ card style:
 		top:			{layouter([0,845,839,0,0])}
 		width:			{layouter([0,60,60,0,0])}
 		height:			{layouter([0,60,60,0,0])}
-		z index:		21
+		z index:		30
 		alignment:		center middle shrink-overflow
 		font:
 			name:		Armada
@@ -283,10 +283,10 @@ card style:
 card style:
 	defense:
 		left:			{layouter([commonhide(),30,54,commonhide(),commonhide()])}
-		top:			{layouter([0,940,888,0,0])}
+		top:			{layouter([0,941,888,0,0])}
 		width:			{layouter([0,60,60,0,0])}
 		height:			{layouter([0,60,60,0,0])}
-		z index:		21
+		z index:		30
 		alignment:		center middle shrink-overflow
 		font:
 			name:		Armada
