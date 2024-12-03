@@ -194,6 +194,14 @@ card field:
 	editable:			false
 	choice: true
 
+card field:
+	type:				choice
+	name:				SSD-icons
+	show statistics:		false
+	editable:			true
+	choice: invisible
+	choice: visible
+
 ####################### Card type
 
 card field:
