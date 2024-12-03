@@ -258,25 +258,175 @@ symbol:
 
 symbol:
 	code: (black)
-	image: black.png
+	image: chits/black.png
 symbol:
 	code: (white)
-	image: white.png
+	image: chits/white.png
 symbol:
 	code: (blue)
-	image: blue.png
+	image: chits/blue.png
 symbol:
 	code: (brown)
-	image: brown.png
+	image: chits/brown.png
 symbol:
 	code: (red)
-	image: red.png
+	image: chits/red.png
 symbol:
 	code: (green)
-	image: green.png
+	image: chits/green.png
 symbol:
 	code: (purple)
-	image: purple.png
+	image: chits/purple.png
+
+symbol:
+	code: (black1)
+	image: chits/black1.png
+symbol:
+	code: (white1)
+	image: chits/white1.png
+symbol:
+	code: (blue1)
+	image: chits/blue1.png
+symbol:
+	code: (brown1)
+	image: chits/brown1.png
+symbol:
+	code: (red1)
+	image: chits/red1.png
+symbol:
+	code: (green1)
+	image: chits/green1.png
+symbol:
+	code: (purple1)
+	image: chits/purple1.png
+symbol:
+	code: (grey1)
+	image: chits/grey1.png
+
+symbol:
+	code: (black2)
+	image: chits/black2.png
+symbol:
+	code: (white2)
+	image: chits/white2.png
+symbol:
+	code: (blue2)
+	image: chits/blue2.png
+symbol:
+	code: (brown2)
+	image: chits/brown2.png
+symbol:
+	code: (red2)
+	image: chits/red2.png
+symbol:
+	code: (green2)
+	image: chits/green2.png
+symbol:
+	code: (purple2)
+	image: chits/purple2.png
+symbol:
+	code: (grey2)
+	image: chits/grey2.png
+
+symbol:
+	code: (black3)
+	image: chits/black3.png
+symbol:
+	code: (white3)
+	image: chits/white3.png
+symbol:
+	code: (blue3)
+	image: chits/blue3.png
+symbol:
+	code: (brown3)
+	image: chits/brown3.png
+symbol:
+	code: (red3)
+	image: chits/red3.png
+symbol:
+	code: (green3)
+	image: chits/green3.png
+symbol:
+	code: (purple3)
+	image: chits/purple3.png
+symbol:
+	code: (grey3)
+	image: chits/grey3.png
+
+symbol:
+	code: (black4)
+	image: chits/black4.png
+symbol:
+	code: (white4)
+	image: chits/white4.png
+symbol:
+	code: (blue4)
+	image: chits/blue4.png
+symbol:
+	code: (brown4)
+	image: chits/brown4.png
+symbol:
+	code: (red4)
+	image: chits/red4.png
+symbol:
+	code: (green4)
+	image: chits/green4.png
+symbol:
+	code: (purple4)
+	image: chits/purple4.png
+symbol:
+	code: (grey4)
+	image: chits/grey4.png
+
+symbol:
+	code: (black5)
+	image: chits/black5.png
+symbol:
+	code: (white5)
+	image: chits/white5.png
+symbol:
+	code: (blue5)
+	image: chits/blue5.png
+symbol:
+	code: (brown5)
+	image: chits/brown5.png
+symbol:
+	code: (red5)
+	image: chits/red5.png
+symbol:
+	code: (green5)
+	image: chits/green5.png
+symbol:
+	code: (purple5)
+	image: chits/purple5.png
+symbol:
+	code: (grey5)
+	image: chits/grey5.png
+
+symbol:
+	code: (black6)
+	image: chits/black6.png
+symbol:
+	code: (white6)
+	image: chits/white6.png
+symbol:
+	code: (blue6)
+	image: chits/blue6.png
+symbol:
+	code: (brown6)
+	image: chits/brown6.png
+symbol:
+	code: (red6)
+	image: chits/red6.png
+symbol:
+	code: (green6)
+	image: chits/green6.png
+symbol:
+	code: (purple6)
+	image: chits/purple6.png
+symbol:
+	code: (grey6)
+	image: chits/grey6.png
 
 ##############################################################
 # Insert-symbol menu
@@ -390,10 +540,68 @@ insert symbol menu:
 		item: (Designate)
 	item:	
 		name: Color
-		item: (black)
+		item: 
+			name: (black)
+			item: (black)
+			item: (black1)
+			item: (black2)
+			item: (black3)
+			item: (black4)
+			item: (black5)
+			item: (black6)
 		item: (white)
+			item: (white)
+			item: (white1)
+			item: (white2)
+			item: (white3)
+			item: (white4)
+			item: (white5)
+			item: (white6)
 		item: (blue)
+			item: (blue)
+			item: (blue1)
+			item: (blue2)
+			item: (blue3)
+			item: (blue4)
+			item: (blue5)
+			item: (blue6)
 		item: (brown)
+			item: (brown)
+			item: (brown1)
+			item: (brown2)
+			item: (brown3)
+			item: (brown4)
+			item: (brown5)
+			item: (brown6)
 		item: (red)
+			item: (red)
+			item: (red1)
+			item: (red2)
+			item: (red3)
+			item: (red4)
+			item: (red5)
+			item: (red6)
 		item: (green)
+			item: (green)
+			item: (green1)
+			item: (green2)
+			item: (green3)
+			item: (green4)
+			item: (green5)
+			item: (green6)
 		item: (purple)
+			item: (purple)
+			item: (purple1)
+			item: (purple2)
+			item: (purple3)
+			item: (purple4)
+			item: (purple5)
+			item: (purple6)
+		item: (grey)
+			item: (grey)
+			item: (grey1)
+			item: (grey2)
+			item: (grey3)
+			item: (grey4)
+			item: (grey5)
+			item: (grey6)
